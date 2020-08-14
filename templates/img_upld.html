@@ -8,7 +8,8 @@
 <body>
     <form action="{% url 'myapp:img_disp' %}" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
-        Image:<input type="file" name="sam" id="sam">
+        Image1:<input type="file" name="sam1" id="sam1"><br>
+        Image2:<input type="file" name="sam2" id="sam2">
         <input type="submit" value="Submit">
     </form>
     
