@@ -13,4 +13,7 @@ class SampleForm(forms.Form):
     birth_day=forms.ChoiceField(choices=choices_day,required=True,label="Birth Day")
     birth_month=forms.ChoiceField(choices=choices_month,required=True,label="Birth Month")
     birth_year=forms.ChoiceField(choices=choices_year,required=True,label="Birth Year")
-    gender=forms.ChoiceField(choices=[('Male','Male'),('Female','Female')],widget=forms.RadioSelect)
+    gender=forms.ChoiceField(choices=[('Male','Male'),('Female','Female')],widget=forms.RadioSelect)   
+    prog_languages=forms.MultipleChoiceField(choices=[('c','c'),('c++','c++'),('c#','c#'),('python','python'),('java','java')])
+    languages=forms.MultipleChoiceField(choices=[('kannada','kannada'),('english','english'),('telugu','telugu'),('tamil','tamil')],widget=forms.CheckboxSelectMultiple)
+    image=forms.ImageField(max_length=200,allow_empty_file=False,required=True,label="profile pic")
